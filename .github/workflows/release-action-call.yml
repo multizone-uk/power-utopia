@@ -8,11 +8,11 @@ on:
 permissions:
   contents: write
 jobs:
-  Release-solution-ALMLab:
+  Release-solution-Utopia:
     uses: ./.github/workflows/release-solution-to-prod-with-inputs.yml
     with:
       #You can specify the solution name here
-      solution_name: ALMLab
+      solution_name: utopia
       #Update your values here
       BUILD_ENVIRONMENT_URL: orge29f1013.crm11.dynamics.com
       PRODUCTION_ENVIRONMENT_URL: org9481e946.crm11.dynamics.com
