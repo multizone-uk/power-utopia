@@ -16,7 +16,7 @@ jobs:
       #Update your values here
       BUILD_ENVIRONMENT_URL: 'https://orge29f1013.crm11.dynamics.com'
       PRODUCTION_ENVIRONMENT_URL: 'https://org9481e946.crm11.dynamics.com'
-      CLIENT_ID: 2f5e78ee-6c17-4afc-8d6e-2647258b7d64
+      CLIENT_ID: 397a288b-a275-454f-bc53-1885d29e2fb9
       TENANT_ID: 4fb7a570-09cb-4565-9518-0005ef2f0ef8      
     secrets:
       envSecret: ${{ secrets.PowerPlatformSPN }}
