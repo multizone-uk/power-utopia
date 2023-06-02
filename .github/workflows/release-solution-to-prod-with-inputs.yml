@@ -45,8 +45,11 @@ on:
         type: string
         required: true
     secrets:
-      envSecret:
-        description: 'The secret value for authentication using SPN'
+      buildSecret:
+        description: 'The secret value for authentication to build env via SPN'
+        required: true
+      prodSecret:
+        description: 'The secret value for authentication to prod env via SPN'
         required: true
 
 jobs:
@@ -73,7 +76,7 @@ jobs:
       with:
         environment-url: ${{inputs.BUILD_ENVIRONMENT_URL}}
         app-id: ${{inputs.CLIENT_ID}}
-        client-secret: ${{ secrets.envSecret }}
+        client-secret: ${{ secrets.buildSecret }}
         tenant-id: ${{inputs.TENANT_ID}}
         solution-file: ${{ inputs.solution_outbound_folder}}/${{ inputs.solution_name }}.zip
         force-overwrite: true
@@ -84,7 +87,7 @@ jobs:
       with:
         environment-url: ${{inputs.BUILD_ENVIRONMENT_URL}}
         app-id: ${{inputs.CLIENT_ID}}
-        client-secret: ${{ secrets.envSecret }} 
+        client-secret: ${{ secrets.buildSecret }} 
         tenant-id: ${{inputs.TENANT_ID}}
         solution-name: ${{ inputs.solution_name }}
         managed: true
@@ -117,7 +120,7 @@ jobs:
       with:
         environment-url: ${{inputs.PRODUCTION_ENVIRONMENT_URL}}
         app-id: ${{inputs.CLIENT_ID}}
-        client-secret: ${{ secrets.envSecret }}
+        client-secret: ${{ secrets.prodSecret }}
         tenant-id: ${{inputs.TENANT_ID}}
         solution-file: ${{ inputs.solution_release_folder}}/${{ inputs.solution_name }}_managed.zip
         force-overwrite: true
