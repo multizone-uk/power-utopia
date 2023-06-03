@@ -40,7 +40,7 @@ on:
         description: 'The client id'
         type: string
         required: true
-      PRODUCITON_CLIENT_ID: 
+      PRODUCTION_CLIENT_ID: 
         description: 'The client id'
         type: string
         required: true
