@@ -49,7 +49,7 @@ on:
         type: string
         required: true
     secrets:
-      trialSecret:
+      buildSecret:
         description: 'The secret value for authentication to build env via SPN'
         required: true
       prodSecret:
