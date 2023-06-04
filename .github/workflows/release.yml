@@ -26,6 +26,6 @@ jobs:
       PRODUCTION_CLIENT_ID: f0b791a0-cb9f-4b89-b9b0-8a858b7b7c7b
       
     secrets:
-      devSecret: ${{ secrets.PowerPlatformSPN }}
-      buildSecret: ${{ secrets.POWER_TEST_ENV }}
-      prodSecret: ${{ secrets.POWER_TEST_PROD }}
+      devSecret: ${{ secrets.POWER_ANGUSF_DEV }}
+      trialSecret: ${{ secrets.POWER_ANGUSF_TRIAL }}
+      prodSecret: ${{ secrets.POWER_MULTIZONE_DEFAULT }}
