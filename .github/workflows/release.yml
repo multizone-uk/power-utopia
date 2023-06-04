@@ -14,11 +14,18 @@ jobs:
       #You can specify the solution name here
       solution_name: utopia
       #Update your values here
-      BUILD_ENVIRONMENT_URL: 'https://orge29f1013.crm11.dynamics.com'
-      PRODUCTION_ENVIRONMENT_URL: 'https://org9481e946.crm11.dynamics.com'
-      BUILD_CLIENT_ID: 397a288b-a275-454f-bc53-1885d29e2fb9
-      PRODUCTION_CLIENT_ID: f0b791a0-cb9f-4b89-b9b0-8a858b7b7c7b
       TENANT_ID: 4fb7a570-09cb-4565-9518-0005ef2f0ef8      
+      
+      DEV_ENVIRONMENT_URL: 'https://orged198483.crm11.dynamics.com/'
+      DEV_CLIENT_ID: 2f5e78ee-6c17-4afc-8d6e-2647258b7d64
+     
+      BUILD_ENVIRONMENT_URL: 'https://orge29f1013.crm11.dynamics.com'
+      BUILD_CLIENT_ID: 397a288b-a275-454f-bc53-1885d29e2fb9
+      
+      PRODUCTION_ENVIRONMENT_URL: 'https://org9481e946.crm11.dynamics.com'
+      PRODUCTION_CLIENT_ID: f0b791a0-cb9f-4b89-b9b0-8a858b7b7c7b
+      
     secrets:
+      devSecret: ${{ secrets.PowerPlatformSPN }}
       buildSecret: ${{ secrets.POWER_TEST_ENV }}
       prodSecret: ${{ secrets.POWER_TEST_PROD }}
