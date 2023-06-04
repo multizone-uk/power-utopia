@@ -27,5 +27,5 @@ jobs:
       
     secrets:
       # devSecret: ${{ secrets.POWER_ANGUSF_DEV }}
-      trialSecret: ${{ secrets.POWER_ANGUSF_TRIAL }}
+      buildSecret: ${{ secrets.POWER_ANGUSF_TRIAL }}
       prodSecret: ${{ secrets.POWER_MULTIZONE_DEFAULT }}
