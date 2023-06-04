@@ -11,21 +11,17 @@ jobs:
   Release-solution-utopia:
     uses: ./.github/workflows/release-solution-to-prod-with-inputs.yml
     with:
-      #You can specify the solution name here
+      # The solution name.
       solution_name: utopia
-      #Update your values here
-      TENANT_ID: 4fb7a570-09cb-4565-9518-0005ef2f0ef8      
       
-      # DEV_ENVIRONMENT_URL: 'https://orged198483.crm11.dynamics.com/'
-      # DEV_CLIENT_ID: 2f5e78ee-6c17-4afc-8d6e-2647258b7d64
-     
+      # Tenant and environment variables.
+      TENANT_ID: 4fb7a570-09cb-4565-9518-0005ef2f0ef8  
       BUILD_ENVIRONMENT_URL: 'https://orge29f1013.crm11.dynamics.com'
       BUILD_CLIENT_ID: 397a288b-a275-454f-bc53-1885d29e2fb9
-      
       PRODUCTION_ENVIRONMENT_URL: 'https://org9481e946.crm11.dynamics.com'
       PRODUCTION_CLIENT_ID: f0b791a0-cb9f-4b89-b9b0-8a858b7b7c7b
       
+    # Azure Active Directory App registrations > client secrets for each environment to identify and authorise GitHub Actions
     secrets:
-      # devSecret: ${{ secrets.POWER_ANGUSF_DEV }}
       buildSecret: ${{ secrets.POWER_ANGUSF_TRIAL }}
       prodSecret: ${{ secrets.POWER_MULTIZONE_DEFAULT }}
